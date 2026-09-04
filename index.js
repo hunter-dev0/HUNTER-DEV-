@@ -41,9 +41,9 @@ const INSTAGRAM_URL =
 const OWNER_USERNAME =
   (process.env.OWNER_USERNAME || "hunterdev0").replace("@", "");
 
-const PREMIUM_7 = Number(process.env.PREMIUM_7 || 200);
-const PREMIUM_30 = Number(process.env.PREMIUM_30 || 500);
-const PREMIUM_LIFETIME = Number(process.env.PREMIUM_LIFETIME || 1500);
+const PREMIUM_7 = Number(process.env.PREMIUM_7 || 1200);
+const PREMIUM_30 = Number(process.env.PREMIUM_30 || 1900);
+const PREMIUM_LIFETIME = Number(process.env.PREMIUM_LIFETIME || 4500);
 
 if (!BOT_TOKEN) {
   console.error("❌ BOT_TOKEN missing in .env");
@@ -83,7 +83,7 @@ app.get("/health", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`🌐 Server running on port ${PORT}`);
 });
 
